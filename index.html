@@ -12,8 +12,12 @@ p { color:#cbb894; line-height:1.8; max-width:650px; margin: 0 auto; }
 .btn { display:inline-block; margin-top:25px; padding:12px 25px; border:1px solid #e8dcc3; color:#e8dcc3; text-decoration:none; letter-spacing:2px; }
 .gallery { padding:40px 20px; max-width:700px; margin:0 auto; }
 .gallery img { width:100%; border:2px solid #4a3823; border-radius:10px; margin-top:15px; }
-.cards { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; padding:20px; }
-.card { background:#2b1d12; border:1px solid #4a3823; padding:25px; width:260px; border-radius:10px; }
+.folders { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; padding:20px; max-width:700px; margin:0 auto; }
+.folder { background:#2b1d12; border:1px solid #4a3823; padding:25px 15px; width:150px; border-radius:12px; text-decoration:none; color:#e8dcc3; }
+.folder span { font-size:40px; display:block; margin-bottom:10px; }
+.folder b { font-size:16px; letter-spacing:1px; }
+.folder small { color:#cbb894; display:block; margin-top:5px; }
+.back { display:inline-block; margin-top:20px; color:#cbb894; font-size:13px; text-decoration:none; }
 </style>
 </head>
 <body>
@@ -24,19 +28,34 @@ p { color:#cbb894; line-height:1.8; max-width:650px; margin: 0 auto; }
 <p style="margin-top:20px;">A quiet ancient library for my art, stories & memories to rest in.</p>
 <a class="btn" href="#art">ENTER THE LIBRARY ↓</a>
 </div>
+
 <div id="art" class="gallery">
-<h2>🖼️ Featured Work</h2>
+<h2>🎨 MY ART</h2>
+<p>Pilih folder untuk melihat koleksinya</p>
+<div class="folders">
+<a class="folder" href="#sceneries"><span>📸</span><b>Shot Sceneries</b><small>1 artwork</small></a>
+<a class="folder" href="#food"><span>🍔</span><b>Crazy Food</b><small>Coming Soon</small></a>
+<a class="folder" href="#animals"><span>🐾</span><b>Hungry Animals</b><small>Coming Soon</small></a>
+<a class="folder" href="#portraits"><span>🧑</span><b>Portraits</b><small>Coming Soon</small></a>
+<a class="folder" href="#etc"><span>📁</span><b>Etc</b><small>Coming Soon</small></a>
+</div>
+</div>
+
+<div id="sceneries" class="gallery">
+<h2>📸 Shot Sceneries</h2>
 <h3 style="color:#fff; font-size:28px; letter-spacing:2px;">BLOODY CASTLE</h3>
 <p>Lichaan, 2025 — Acrylic on Paper, 13 x 9 cm</p>
 <img src="Bloody.CASTLE.jpg">
 <p style="margin-top:15px;">The work visualizes a human state of unspoken longing, an interior ache grown to monumental scale. It is a heart that has grown as large as a castle.</p>
 <img src="BloodyCastle.Philosophy.jpg">
+<a class="back" href="#art">↑ Back to My Art</a>
 </div>
-<div class="cards">
-<div class="card"><h3>📚 My Art</h3><p>Kumpulan gambar & ilustrasi dari perpustakaan ini.</p></div>
-<div class="card"><h3>✒️ Stories</h3><p>Cerita, puisi, dan potongan kenangan yang kusimpan.</p></div>
-<div class="card"><h3>🕯️ About Me</h3><p>Hai, aku Lichaan1605. Selamat datang di duniaku.</p></div>
-</div>
+
+<div id="food" class="gallery"><h2>🍔 Crazy Food</h2><p>Coming Soon...</p><a class="back" href="#art">↑ Back to My Art</a></div>
+<div id="animals" class="gallery"><h2>🐾 Hungry Animals</h2><p>Coming Soon...</p><a class="back" href="#art">↑ Back to My Art</a></div>
+<div id="portraits" class="gallery"><h2>🧑 Portraits</h2><p>Coming Soon...</p><a class="back" href="#art">↑ Back to My Art</a></div>
+<div id="etc" class="gallery"><h2>📁 Etc</h2><p>Coming Soon...</p><a class="back" href="#art">↑ Back to My Art</a></div>
+
 <p style="padding-bottom:40px; font-size:13px;">© 2026 Lichaan1605 - Ancient Library</p>
 </body>
 </html>
