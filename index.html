@@ -8,11 +8,12 @@
 body { margin:0; background:#1a130e; color:#e8dcc3; font-family: Georgia, serif; text-align:center; }
 .hero { padding: 80px 20px; background: linear-gradient(#2b1d12, #1a130e); }
 h1 { font-size: 42px; letter-spacing: 3px; margin: 10px 0; }
-p { color:#cbb894; line-height:1.8; max-width:600px; margin: 0 auto; }
+p { color:#cbb894; line-height:1.8; max-width:650px; margin: 0 auto; }
 .btn { display:inline-block; margin-top:25px; padding:12px 25px; border:1px solid #e8dcc3; color:#e8dcc3; text-decoration:none; letter-spacing:2px; }
-.cards { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; padding:40px 20px; }
+.gallery { padding:40px 20px; max-width:700px; margin:0 auto; }
+.gallery img { width:100%; border:2px solid #4a3823; border-radius:10px; margin-top:15px; }
+.cards { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; padding:20px; }
 .card { background:#2b1d12; border:1px solid #4a3823; padding:25px; width:260px; border-radius:10px; }
-.card h3 { margin-top:0; }
 </style>
 </head>
 <body>
@@ -21,15 +22,21 @@ p { color:#cbb894; line-height:1.8; max-width:600px; margin: 0 auto; }
 <h1>LICHAAN1605</h1>
 <p>Ancient Library</p>
 <p style="margin-top:20px;">A quiet ancient library for my art, stories & memories to rest in.</p>
-<a class="btn" href="#gallery">ENTER THE LIBRARY ↓</a>
+<a class="btn" href="#art">ENTER THE LIBRARY ↓</a>
 </div>
-
-<div id="gallery" class="cards">
+<div id="art" class="gallery">
+<h2>🖼️ Featured Work</h2>
+<h3 style="color:#fff; font-size:28px; letter-spacing:2px;">BLOODY CASTLE</h3>
+<p>Lichaan, 2025 — Acrylic on Paper, 13 x 9 cm</p>
+<img src="Bloody.CASTLE.jpg">
+<p style="margin-top:15px;">The work visualizes a human state of unspoken longing, an interior ache grown to monumental scale. It is a heart that has grown as large as a castle.</p>
+<img src="BloodyCastle.Philosophy.jpg">
+</div>
+<div class="cards">
 <div class="card"><h3>📚 My Art</h3><p>Kumpulan gambar & ilustrasi dari perpustakaan ini.</p></div>
 <div class="card"><h3>✒️ Stories</h3><p>Cerita, puisi, dan potongan kenangan yang kusimpan.</p></div>
 <div class="card"><h3>🕯️ About Me</h3><p>Hai, aku Lichaan1605. Selamat datang di duniaku.</p></div>
 </div>
-
 <p style="padding-bottom:40px; font-size:13px;">© 2026 Lichaan1605 - Ancient Library</p>
 </body>
 </html>
