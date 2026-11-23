@@ -9,15 +9,16 @@ body { margin:0; background:#1a130e; color:#e8dcc3; font-family: Georgia, serif;
 .hero { padding: 80px 20px; background: linear-gradient(#2b1d12, #1a130e); }
 h1 { font-size: 42px; letter-spacing: 3px; margin: 10px 0; }
 p { color:#cbb894; line-height:1.8; max-width:650px; margin: 0 auto; }
-.btn { display:inline-block; margin-top:25px; padding:12px 25px; border:1px solid #e8dcc3; color:#e8dcc3; text-decoration:none; letter-spacing:2px; }
-.gallery { padding:40px 20px; max-width:700px; margin:0 auto; }
+.btn { display:inline-block; margin-top:25px; padding:12px 25px; border:1px solid #e8dcc3; color:#e8dcc3; text-decoration:none; letter-spacing:2px; cursor:pointer; }
+.gallery { padding:40px 20px; max-width:700px; margin:0 auto; display:none; }
+.gallery.active { display:block; }
 .gallery img { width:100%; border:2px solid #4a3823; border-radius:10px; margin-top:15px; }
-.folders { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; padding:20px; max-width:700px; margin:0 auto; }
-.folder { background:#2b1d12; border:1px solid #4a3823; padding:25px 15px; width:150px; border-radius:12px; text-decoration:none; color:#e8dcc3; }
+.folders { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; padding:20px; }
+.folder { background:#2b1d12; border:1px solid #4a3823; padding:25px 15px; width:150px; border-radius:12px; color:#e8dcc3; cursor:pointer; }
 .folder span { font-size:40px; display:block; margin-bottom:10px; }
 .folder b { font-size:16px; letter-spacing:1px; }
 .folder small { color:#cbb894; display:block; margin-top:5px; }
-.back { display:inline-block; margin-top:20px; color:#cbb894; font-size:13px; text-decoration:none; }
+.back { display:inline-block; margin-top:20px; color:#cbb894; font-size:13px; cursor:pointer; text-decoration:underline; }
 </style>
 </head>
 <body>
@@ -26,36 +27,83 @@ p { color:#cbb894; line-height:1.8; max-width:650px; margin: 0 auto; }
 <h1>LICHAAN1605</h1>
 <p>Ancient Library</p>
 <p style="margin-top:20px;">A quiet ancient library for my art, stories & memories to rest in.</p>
-<a class="btn" href="#art">ENTER THE LIBRARY ↓</a>
+<a class="btn" onclick="show('home')">ENTER THE LIBRARY ↓</a>
 </div>
 
+<!-- HOME : ARTS, POEMS, CRAFTS -->
+<div id="home" class="gallery active">
+<h2>📚 LIBRARY</h2>
+<p>Pilih koleksinya</p>
+<div class="folders">
+<div class="folder" onclick="show('art')"><span>🎨</span><b>Arts</b><small>Paintings & Drawings</small></div>
+<div class="folder" onclick="show('poems')"><span>✒️</span><b>Poems</b><small>Words & Memories</small></div>
+<div class="folder" onclick="show('crafts')"><span>🧶</span><b>Crafts</b><small>Coming Soon</small></div>
+</div>
+</div>
+
+<!-- ARTS -->
 <div id="art" class="gallery">
-<h2>🎨 MY ART</h2>
+<h2>🎨 ARTS</h2>
 <p>Pilih folder untuk melihat koleksinya</p>
 <div class="folders">
-<a class="folder" href="#sceneries"><span>📸</span><b>Shot Sceneries</b><small>1 artwork</small></a>
-<a class="folder" href="#food"><span>🍔</span><b>Crazy Food</b><small>Coming Soon</small></a>
-<a class="folder" href="#animals"><span>🐾</span><b>Hungry Animals</b><small>Coming Soon</small></a>
-<a class="folder" href="#portraits"><span>🧑</span><b>Portraits</b><small>Coming Soon</small></a>
-<a class="folder" href="#etc"><span>📁</span><b>Etc</b><small>Coming Soon</small></a>
+<div class="folder" onclick="show('sceneries')"><span>📸</span><b>Shot Sceneries</b><small>1 artwork</small></div>
+<div class="folder" onclick="show('food')"><span>🍔</span><b>Crazy Food</b><small>Coming Soon</small></div>
+<div class="folder" onclick="show('animals')"><span>🐾</span><b>Hungry Animals</b><small>Coming Soon</small></div>
+<div class="folder" onclick="show('portraits')"><span>🧑</span><b>Portraits</b><small>Coming Soon</small></div>
+<div class="folder" onclick="show('etc')"><span>📁</span><b>Etc</b><small>Coming Soon</small></div>
 </div>
+<div class="back" onclick="show('home')">↑ Back to Library</div>
 </div>
 
+<!-- SHOT SCENERIES -->
 <div id="sceneries" class="gallery">
 <h2>📸 Shot Sceneries</h2>
-<h3 style="color:#fff; font-size:28px; letter-spacing:2px;">BLOODY CASTLE</h3>
+<p>Pilih artwork-nya</p>
+<div class="folders">
+<div class="folder" onclick="show('bloody')"><span>🏰</span><b>Bloody Castle</b><small>2025</small></div>
+<div class="folder"><span>🖼️</span><b>Coming Soon</b><small>-</small></div>
+</div>
+<div class="back" onclick="show('art')">↑ Back to Arts</div>
+</div>
+
+<!-- DETAIL BLOODY CASTLE -->
+<div id="bloody" class="gallery">
+<h2>🏰 BLOODY CASTLE</h2>
 <p>Lichaan, 2025 — Acrylic on Paper, 13 x 9 cm</p>
 <img src="Bloody.CASTLE.jpg">
 <p style="margin-top:15px;">The work visualizes a human state of unspoken longing, an interior ache grown to monumental scale. It is a heart that has grown as large as a castle.</p>
 <img src="BloodyCastle.Philosophy.jpg">
-<a class="back" href="#art">↑ Back to My Art</a>
+<div class="back" onclick="show('sceneries')">↑ Back to Shot Sceneries</div>
 </div>
 
-<div id="food" class="gallery"><h2>🍔 Crazy Food</h2><p>Coming Soon...</p><a class="back" href="#art">↑ Back to My Art</a></div>
-<div id="animals" class="gallery"><h2>🐾 Hungry Animals</h2><p>Coming Soon...</p><a class="back" href="#art">↑ Back to My Art</a></div>
-<div id="portraits" class="gallery"><h2>🧑 Portraits</h2><p>Coming Soon...</p><a class="back" href="#art">↑ Back to My Art</a></div>
-<div id="etc" class="gallery"><h2>📁 Etc</h2><p>Coming Soon...</p><a class="back" href="#art">↑ Back to My Art</a></div>
+<!-- POEMS -->
+<div id="poems" class="gallery">
+<h2>✒️ POEMS</h2>
+<p>Coming Soon... puisi-puisimu akan tinggal di sini.</p>
+<div class="back" onclick="show('home')">↑ Back to Library</div>
+</div>
+
+<!-- CRAFTS -->
+<div id="crafts" class="gallery">
+<h2>🧶 CRAFTS</h2>
+<p>Coming Soon...</p>
+<div class="back" onclick="show('home')">↑ Back to Library</div>
+</div>
+
+<!-- FOLDER LAIN DI ARTS -->
+<div id="food" class="gallery"><h2>🍔 Crazy Food</h2><p>Coming Soon...</p><div class="back" onclick="show('art')">↑ Back to Arts</div></div>
+<div id="animals" class="gallery"><h2>🐾 Hungry Animals</h2><p>Coming Soon...</p><div class="back" onclick="show('art')">↑ Back to Arts</div></div>
+<div id="portraits" class="gallery"><h2>🧑 Portraits</h2><p>Coming Soon...</p><div class="back" onclick="show('art')">↑ Back to Arts</div></div>
+<div id="etc" class="gallery"><h2>📁 Etc</h2><p>Coming Soon...</p><div class="back" onclick="show('art')">↑ Back to Arts</div></div>
 
 <p style="padding-bottom:40px; font-size:13px;">© 2026 Lichaan1605 - Ancient Library</p>
+
+<script>
+function show(id){
+  document.querySelectorAll('.gallery').forEach(function(el){ el.classList.remove('active'); });
+  document.getElementById(id).classList.add('active');
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
 </body>
 </html>
