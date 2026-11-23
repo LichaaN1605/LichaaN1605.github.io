@@ -6,13 +6,14 @@
 <title>StrawSunBurries</title>
 <style>
 body { margin:0; background:#1a130e; color:#e8dcc3; font-family: Georgia, serif; text-align:center; }
-.hero { padding: 80px 20px; background: linear-gradient(#2b1d12, #1a130e); }
-h1 { font-size: 44px; letter-spacing: 3px; margin: 10px 0; line-height:1.2; }
-p { color:#cbb894; line-height:1.9; max-width:650px; margin: 0 auto; }
-.subtitle { font-size:14px; color:#e8dcc3; letter-spacing:1px; margin-top:15px; line-height:1.8; }
-.tale { font-style: italic; font-size: 16px; color:#e8dcc3; margin-top:30px; line-height:2.1; }
-.btn { display:inline-block; margin-top:30px; padding:12px 28px; border:1px solid #e8dcc3; color:#e8dcc3; text-decoration:none; letter-spacing:2px; cursor:pointer; }
-.gallery { padding:40px 20px; max-width:700px; margin:0 auto; display:none; }
+.hero { padding: 50px 20px 40px; background: linear-gradient(#2b1d12, #1a130e); }
+h1 { font-size: 44px; letter-spacing: 2px; margin: 8px 0; line-height:1.15; font-style: italic; }
+p { color:#cbb894; line-height:1.8; max-width:650px; margin: 0 auto; }
+.welcome { font-style: italic; color:#e8dcc3; }
+.subtitle { font-size:13px; color:#e8dcc3; margin-top:15px; line-height:1.7; }
+.tale { font-style: italic; font-size: 15px; color:#e8dcc3; margin-top:25px; line-height:2; }
+.btn { display:inline-block; margin-top:25px; padding:12px 28px; border:1px solid #e8dcc3; color:#e8dcc3; text-decoration:none; letter-spacing:2px; cursor:pointer; }
+.gallery { padding:30px 20px; max-width:700px; margin:0 auto; display:none; }
 .gallery.active { display:block; }
 .gallery img { width:100%; border:2px solid #4a3823; border-radius:10px; margin-top:15px; }
 .folders { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; padding:20px; }
@@ -25,6 +26,94 @@ p { color:#cbb894; line-height:1.9; max-width:650px; margin: 0 auto; }
 </head>
 <body>
 <div class="hero">
-<p>Welcome to</p>
-<h1>StrawSun<br>Burries.</h1>
-<p class="subtitle">The World of the Author named @StrawSunBerries<br>/
+<p class="welcome">✦ Welcome to ✦</p>
+<h1>STRAWSUN<br>BURRIES</h1>
+<p class="subtitle">The World of the Author named @StrawSunBerries / Small artist named @Lichaan1605</p>
+
+<p class="tale">" Have you ever heard a beautiful tale?<br><br>
+Once upon a lies...<br>
+There was a place where people could anchor their unfulfilled dreams, rest their weary hearts, and quench their endless thirst.<br><br>
+In Strawsunburries,<br>
+The dead do not become ghosts. They become signposts.<br><br>
+Would you dare to give in? "</p>
+
+<a class="btn" onclick="show('home')">Enter the StrawSun Burries</a>
+</div>
+
+<!-- HOME : ARTS, POEMS, CRAFTS -->
+<div id="home" class="gallery active">
+<h2>📚 LIBRARY</h2>
+<p>Pilih koleksinya</p>
+<div class="folders">
+<div class="folder" onclick="show('art')"><span>🎨</span><b>Arts</b><small>Paintings & Drawings</small></div>
+<div class="folder" onclick="show('poems')"><span>✒️</span><b>Poems</b><small>Words & Memories</small></div>
+<div class="folder" onclick="show('crafts')"><span>🧶</span><b>Crafts</b><small>Coming Soon</small></div>
+</div>
+</div>
+
+<!-- ARTS -->
+<div id="art" class="gallery">
+<h2>🎨 ARTS</h2>
+<p>Pilih folder untuk melihat koleksinya</p>
+<div class="folders">
+<div class="folder" onclick="show('sceneries')"><span>📸</span><b>Shot Sceneries</b><small>1 artwork</small></div>
+<div class="folder" onclick="show('food')"><span>🍔</span><b>Crazy Food</b><small>Coming Soon</small></div>
+<div class="folder" onclick="show('animals')"><span>🐾</span><b>Hungry Animals</b><small>Coming Soon</small></div>
+<div class="folder" onclick="show('portraits')"><span>🧑</span><b>Portraits</b><small>Coming Soon</small></div>
+<div class="folder" onclick="show('etc')"><span>📁</span><b>Etc</b><small>Coming Soon</small></div>
+</div>
+<div class="back" onclick="show('home')">↑ Back to Library</div>
+</div>
+
+<!-- SHOT SCENERIES -->
+<div id="sceneries" class="gallery">
+<h2>📸 Shot Sceneries</h2>
+<p>Pilih artwork-nya</p>
+<div class="folders">
+<div class="folder" onclick="show('bloody')"><span>🏰</span><b>Bloody Castle</b><small>2025</small></div>
+<div class="folder"><span>🖼️</span><b>Coming Soon</b><small>-</small></div>
+</div>
+<div class="back" onclick="show('art')">↑ Back to Arts</div>
+</div>
+
+<!-- DETAIL BLOODY CASTLE -->
+<div id="bloody" class="gallery">
+<h2>🏰 BLOODY CASTLE</h2>
+<p>Lichaan, 2025 — Acrylic on Paper, 13 x 9 cm</p>
+<img src="Bloody.CASTLE.jpg">
+<p style="margin-top:15px;">The work visualizes a human state of unspoken longing, an interior ache grown to monumental scale. It is a heart that has grown as large as a castle.</p>
+<img src="BloodyCastle.Philosophy.jpg">
+<div class="back" onclick="show('sceneries')">↑ Back to Shot Sceneries</div>
+</div>
+
+<!-- POEMS -->
+<div id="poems" class="gallery">
+<h2>✒️ POEMS</h2>
+<p>Coming Soon... puisi-puisimu akan tinggal di sini.</p>
+<div class="back" onclick="show('home')">↑ Back to Library</div>
+</div>
+
+<!-- CRAFTS -->
+<div id="crafts" class="gallery">
+<h2>🧶 CRAFTS</h2>
+<p>Coming Soon...</p>
+<div class="back" onclick="show('home')">↑ Back to Library</div>
+</div>
+
+<!-- FOLDER LAIN DI ARTS -->
+<div id="food" class="gallery"><h2>🍔 Crazy Food</h2><p>Coming Soon...</p><div class="back" onclick="show('art')">↑ Back to Arts</div></div>
+<div id="animals" class="gallery"><h2>🐾 Hungry Animals</h2><p>Coming Soon...</p><div class="back" onclick="show('art')">↑ Back to Arts</div></div>
+<div id="portraits" class="gallery"><h2>🧑 Portraits</h2><p>Coming Soon...</p><div class="back" onclick="show('art')">↑ Back to Arts</div></div>
+<div id="etc" class="gallery"><h2>📁 Etc</h2><p>Coming Soon...</p><div class="back" onclick="show('art')">↑ Back to Arts</div></div>
+
+<p style="padding-bottom:40px; font-size:13px;">© 2026 Sincerely, Lichaan1605 & StawSunBerries</p>
+
+<script>
+function show(id){
+  document.querySelectorAll('.gallery').forEach(function(el){ el.classList.remove('active'); });
+  document.getElementById(id).classList.add('active');
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>
