@@ -89,33 +89,76 @@ Would you dare to give in? "</p>
 <!-- POEMS -->
 <div id="poems" class="gallery">
 <h2>✒️ POEMS</h2>
-<p>Pilih puisinya</p>
+<p>Pilih koleksinya</p>
 <div class="folders">
-<div class="folder" onclick="show('blue')">
-<img src="Blue.Poem.jpg" style="width:100%; border-radius:8px; display:block;">
-<b style="display:block; margin-top:8px;">BLUE.</b>
-<small>StrawSunBerries [2026]</small>
+<div class="folder" onclick="show('strangeness')"><span>📖</span><b>The Strangeness of Becoming a Human</b><small>StrawSunBerries [2026]</small></div>
+</div>
+<div class="back" onclick="show('home')">↑ Back to Library</div>
 </div>
 
+<!-- THE STRANGENESS -->
+<div id="strangeness" class="gallery">
+<h2>📖 The Strangeness of Becoming a Human</h2>
+<p>Pilih bab-nya</p>
+<div class="folders">
+<div class="folder" onclick="show('wander')"><span>✨</span><b>Wander Wonders</b><small>Chapter 1</small></div>
+<div class="folder" onclick="show('desire')"><span>🔥</span><b>Desire & Greed</b><small>Chapter 2</small></div>
+<div class="folder" onclick="show('grief')"><span>💔</span><b>Grief to Lose</b><small>Chapter 3</small></div>
+<div class="folder" onclick="show('relief')"><span>🍃</span><b>Relief on Release</b><small>Chapter 4</small></div>
+</div>
+<div class="back" onclick="show('poems')">↑ Back to Poems</div>
+</div>
+
+<!-- WANDER WONDERS -->
+<div id="wander" class="gallery">
+<h2>✨ Wander Wonders</h2>
+<p>Belum ada puisi di sini...</p>
+<div class="back" onclick="show('strangeness')">↑ Back to The Strangeness</div>
+</div>
+
+<!-- DESIRE & GREED -->
+<div id="desire" class="gallery">
+<h2>🔥 Desire & Greed</h2>
+<div class="folders">
 <div class="folder" onclick="show('medusa')">
 <img src="Medusa.Poem.jpg" style="width:100%; border-radius:8px; display:block;">
 <b style="display:block; margin-top:8px;">MEDUSA.</b>
 <small>StrawSunBerries [2026]</small>
 </div>
 </div>
-<div class="back" onclick="show('home')">↑ Back to Library</div>
+<div class="back" onclick="show('strangeness')">↑ Back to The Strangeness</div>
 </div>
 
-<!-- DETAIL BLUE - GAMBAR FULL -->
+<!-- GRIEF TO LOSE -->
+<div id="grief" class="gallery">
+<h2>💔 Grief to Lose</h2>
+<div class="folders">
+<div class="folder" onclick="show('blue')">
+<img src="Blue.Poem.jpg" style="width:100%; border-radius:8px; display:block;">
+<b style="display:block; margin-top:8px;">BLUE.</b>
+<small>StrawSunBerries [2026]</small>
+</div>
+</div>
+<div class="back" onclick="show('strangeness')">↑ Back to The Strangeness</div>
+</div>
+
+<!-- RELIEF ON RELEASE -->
+<div id="relief" class="gallery">
+<h2>🍃 Relief on Release</h2>
+<p>Belum ada puisi di sini...</p>
+<div class="back" onclick="show('strangeness')">↑ Back to The Strangeness</div>
+</div>
+
+<!-- DETAIL BLUE -->
 <div id="blue" class="gallery">
 <img src="Blue.Poem.jpg" style="width:100%; border-radius:8px; display:block;">
-<div class="back" onclick="show('poems')">↑ Back to Poems</div>
+<div class="back" onclick="show('grief')">↑ Back to Grief to Lose</div>
 </div>
 
-<!-- DETAIL MEDUSA - GAMBAR FULL -->
+<!-- DETAIL MEDUSA -->
 <div id="medusa" class="gallery">
 <img src="Medusa.Poem.jpg" style="width:100%; border-radius:8px; display:block;">
-<div class="back" onclick="show('poems')">↑ Back to Poems</div>
+<div class="back" onclick="show('desire')">↑ Back to Desire & Greed</div>
 </div>
 
   
